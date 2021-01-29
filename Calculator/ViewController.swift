@@ -7,15 +7,41 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+    
+    // MARK: - IBOutlets
 
-    var numberOfScreen:Double = 0;
-    var firstNum:Double = 0;
-    var mathSign:Bool = false;
-    var operation:Int = 0;
+    @IBOutlet private weak var result: UILabel!
+
+    @IBOutlet private weak var buttonC: UIButton!
+    @IBOutlet private weak var buttonNotUsed1: UIButton!
+    @IBOutlet private weak var buttonNotUsed2: UIButton!
+    @IBOutlet private weak var buttonSlash: UIButton!
     
-    @IBOutlet weak var result: UILabel!
+    // MARK: - Private properties
     
+    private var numberOfScreen:Double = 0;
+    private var firstNum:Double = 0;
+    private var mathSign:Bool = false;
+    private var operation:Int = 0;
+
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupButtonsCorners()
+    }
+
+    // MARK: - Private methods
+
+    private func setupButtonsCorners() {
+        [buttonC, buttonNotUsed1, buttonNotUsed2, buttonSlash].forEach {
+            $0?.layer.cornerRadius = 15
+        }
+    }
+
+    // MARK: - IBActions
+
     @IBAction func digits(_ sender: UIButton) {
         if mathSign == true {
             result.text = String(sender.tag)
@@ -28,7 +54,6 @@ class ViewController: UIViewController {
         
         numberOfScreen = Double(result.text!)!
     }
-    
     
     @IBAction func buttons(_ sender: UIButton) {
         if result.text != "" && sender.tag != 10 && sender.tag != 15 {
@@ -47,8 +72,7 @@ class ViewController: UIViewController {
             }
             operation = sender.tag
             mathSign = true;
-        }
-        else if sender.tag == 15{
+        } else if sender.tag == 15{
             if operation == 11 {
                 result.text = String(firstNum / numberOfScreen)
             }
@@ -61,20 +85,13 @@ class ViewController: UIViewController {
             else if operation == 14 {
                 result.text = String(firstNum + numberOfScreen)
             }
-        }
-        else if sender.tag == 10 {
+        } else if sender.tag == 10 {
             result.text = ""
             firstNum = 0
             numberOfScreen = 0
             operation = 0
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
 
 }
 

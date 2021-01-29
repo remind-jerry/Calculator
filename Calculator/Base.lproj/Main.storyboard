@@ -270,6 +270,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonC" destination="YUP-bV-qj2" id="ikE-ms-R1z"/>
+                        <outlet property="buttonNotUsed1" destination="cCa-bg-gu7" id="gEp-fw-0Bd"/>
+                        <outlet property="buttonNotUsed2" destination="NIP-4l-WSq" id="Ov9-7v-A4T"/>
+                        <outlet property="buttonSlash" destination="cxI-DJ-dVd" id="6A7-w1-IB7"/>
                         <outlet property="result" destination="jit-Nw-sSP" id="k8g-Fp-yKT"/>
                     </connections>
                 </viewController>
