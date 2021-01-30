@@ -270,10 +270,25 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button0" destination="UaE-Tr-F9m" id="qiz-9m-Xfv"/>
+                        <outlet property="button1" destination="knN-5R-Pix" id="JMf-Ll-15Q"/>
+                        <outlet property="button2" destination="FPc-XU-cVP" id="cn1-Uf-Ci5"/>
+                        <outlet property="button3" destination="ywh-Hx-fc9" id="79d-Fm-Ez9"/>
+                        <outlet property="button4" destination="eOu-pX-wkv" id="d5h-Y9-ves"/>
+                        <outlet property="button5" destination="9Fz-ED-0uR" id="YLC-YF-IDO"/>
+                        <outlet property="button6" destination="9op-kt-bI6" id="AL8-ib-pGS"/>
+                        <outlet property="button7" destination="kS4-2V-z9c" id="tYs-GS-QMK"/>
+                        <outlet property="button8" destination="Ddd-x9-svj" id="F71-ol-vVm"/>
+                        <outlet property="button9" destination="fmE-T9-YuI" id="3uR-Mp-iXd"/>
                         <outlet property="buttonC" destination="YUP-bV-qj2" id="ikE-ms-R1z"/>
+                        <outlet property="buttonMinus" destination="dzj-Ic-0b4" id="WzV-OH-Lhz"/>
                         <outlet property="buttonNotUsed1" destination="cCa-bg-gu7" id="gEp-fw-0Bd"/>
                         <outlet property="buttonNotUsed2" destination="NIP-4l-WSq" id="Ov9-7v-A4T"/>
+                        <outlet property="buttonNotUsed3" destination="uP3-2w-uB8" id="DSC-Fm-dsv"/>
+                        <outlet property="buttonPlus" destination="RWp-5p-OzF" id="UOf-LC-3ug"/>
+                        <outlet property="buttonRavno" destination="vcD-g8-UfZ" id="FUN-W2-gWu"/>
                         <outlet property="buttonSlash" destination="cxI-DJ-dVd" id="6A7-w1-IB7"/>
+                        <outlet property="buttonX" destination="mMe-5w-qAO" id="fdN-wB-abj"/>
                         <outlet property="result" destination="jit-Nw-sSP" id="k8g-Fp-yKT"/>
                     </connections>
                 </viewController>
