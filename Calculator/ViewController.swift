@@ -50,7 +50,9 @@ final class ViewController: UIViewController {
     // MARK: - Private methods
 
     private func setupButtonsCorners() {
-        [buttonC, buttonNotUsed1, buttonNotUsed2, buttonSlash, button1, button2, button3, button4, button5, button6,button7, button8, button9, button0, buttonX, buttonMinus, buttonPlus, buttonRavno, buttonNotUsed3].forEach {
+        [buttonC, buttonNotUsed1, buttonNotUsed2, buttonSlash, button1,
+         button2, button3, button4, button5, button6, button7, button8,
+         button9, button0, buttonX, buttonMinus, buttonPlus, buttonRavno, buttonNotUsed3].forEach {
             $0?.layer.cornerRadius = 15
         }
     }
@@ -64,8 +66,7 @@ final class ViewController: UIViewController {
         } else {
             result.text = result.text! + String(sender.tag)
         }
-        
-        
+
         numberOfScreen = Double(result.text!)!
     }
     
